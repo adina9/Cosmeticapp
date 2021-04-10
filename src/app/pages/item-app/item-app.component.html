@@ -1,6 +1,0 @@
-<div class="item-app">
-    <app-filter [filterBy$]="filterBy$" (onSetFilter)="onSetFilter($event)"></app-filter>
-<div class="item-list">
-    <item-preview *ngFor="let item of items$|async" [item]="item" (onBuyItem)="onBuyItem($event)"></item-preview>
-</div>
-</div>
