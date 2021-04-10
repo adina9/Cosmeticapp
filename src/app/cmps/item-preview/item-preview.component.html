@@ -1,0 +1,10 @@
+<div class="item-preview" [routerLink]="['item',item.id]">
+
+    <div class="img-item">
+        <img [src]="item.img" alt="">
+    </div>
+    <div class="info">
+        <p class="item-title">{{item.name}}</p>
+        <p class="item-price">{{item.price|currency}}</p>
+    </div>
+</div>

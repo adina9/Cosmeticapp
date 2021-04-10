@@ -1,0 +1,29 @@
+.item-preview {
+    .img-item {
+        // width: 90%;
+        justify-content: center;
+        display: flex;
+        // border-radius: 1px;
+        box-shadow: 0 0 20px #3b3e3c66;
+        z-index: 1;
+        img {
+            width: 80%;
+            margin: 7%;
+            padding: 3%;
+        }
+    }
+    .info {
+        .item-title {
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            font-family: cursive;
+            font-size: 15px;
+            text-shadow: 2px -2px 6px #9c9c9c99;
+        }
+        .item-price {
+            margin-top: 8px;
+            font-size: large;
+            font-family: cursive;
+        }
+    }
+}

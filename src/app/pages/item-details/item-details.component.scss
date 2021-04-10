@@ -1,0 +1,124 @@
+.item-details{
+    width: 80%;
+    margin: 27vh auto;
+    border: 2px solid;
+    padding: 2%;
+    display: block;
+    .grid-part{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        .back-btn{
+            position: relative;
+            right: 26vh;
+            top: -5px;
+            cursor: pointer;
+            padding: 0;
+            font: inherit;
+            color: inherit;
+            border: none;
+            /* position: absolute; */
+            background-color: inherit;
+            display: block;
+        }
+        .first-part,.second-part{
+            margin: auto;
+        }
+        .second-part{
+            .info{
+                color: #414141;
+                font-family: fangsong;
+                margin-top: -81px;
+                margin-right: 50px;
+                h2{
+                    font-size: 34px;
+                    line-height: 55px;
+                    margin-bottom: 13px;
+                }
+                .desc-item{
+                    font-size: 20px;
+                    
+                }
+            }
+            .not-stock{
+                position: absolute;
+                margin-top: 8px;
+                color: red;
+            }
+            .editing{
+                position: absolute;
+                margin-top: 6vh;
+                justify-content: space-between;
+                width: 100px;
+                .remove-btn{
+                    img{
+                        width: 50px;
+                    }
+                }
+                .edit-btn{
+                    img{
+                        width: 40px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+        .confirm{
+            background-color: #e4e4e4;
+            width: 50vh;
+            /* margin: auto; */
+            position: absolute;
+            left: 86vh;
+            height: 15vh;
+            top: 18vh;
+            padding: 1%;
+            align-items: center;
+            font-family: -webkit-pictograph;
+            z-index: 1;
+            line-height: 25px;
+            box-shadow: 1px 6px 7px 2px #0000005c;
+            border: 2px solid #626262;
+            border-radius: 3px;
+            .confirm-btns{
+                margin-top: 24px;
+                float: right;
+                width: 200px;
+                justify-content: space-between;
+                .remove-btn{
+                    margin-left: 85px;
+                    width: 70px;
+                    position: absolute;
+                    border-radius: 3px;
+                }
+                .cancel-btn{
+                    background-color: gray;
+                    left: 50px;
+                    position: relative;
+                    border-radius: 3px;
+                    width: 70px;
+                    margin-right: -25px;
+                }
+                .remove-btn{
+                    background-color: #e6645a;
+
+                }
+            }
+        }
+    }
+    .reviews-btn{
+        button{
+            background-color: #4654547a;
+            width: 11vh;
+            height: 4vh;
+            border-radius: 2px;
+            font-family: initial;
+        }
+    }
+  .reviews-area{
+    background-color: #e8e8e8;
+    margin-top: 3%;
+    border-top: 2px solid gray;
+    padding-top: 11px;
+    padding: 3%;
+  }
+    
+}

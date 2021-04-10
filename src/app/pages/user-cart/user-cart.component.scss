@@ -1,0 +1,41 @@
+.user-cart{
+    width: 70%;
+    margin: 25vh auto 10vh;
+    border: 2px solid gray;
+    margin-bottom: 0;
+    color: #333333;
+    font-family: emoji;
+    .top{
+        height: 6vh;
+        display: flex;
+        padding: 3vh;
+        border-bottom: 1px solid gray;
+        align-items: center;
+        h1{
+            font-size: 23px;
+            /* text-align: center; */
+        }
+        img{
+            width: 28px;
+            margin-left: 5px;
+        }
+    }
+    .not-found{
+        width: 50%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        .no-items{
+            height: 16vh;
+            font-family: auto;
+            padding: 3vh;
+            font-size: 20px;
+        }
+        img{
+            width: 80px;
+            /* float: right; */
+            /* display: block; */
+            object-fit: contain;
+        }
+    }
+}

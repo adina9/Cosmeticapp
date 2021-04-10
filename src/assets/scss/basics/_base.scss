@@ -1,0 +1,81 @@
+*,
+:after,
+::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+  @include from-mobile-layout {
+    font-size: 16px;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: cereal, Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  border: none;
+  background-color: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+small {
+  font-size: 14px;
+}
+textarea {
+  font: inherit;
+  &:focus {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+p {
+  margin: 0;
+}
+pre {
+  font-family: roboto;
+  margin: 0;
+  white-space: break-spaces;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  outline: none;
+  font: inherit;
+  font-size: 14px;
+  color: inherit;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  // &:-internal-autofill-previewed {
+  //   background-color: initial !important;
+  //   color: unset !important;
+  // }
+
+  :focus {
+    outline: none;
+  }
+}

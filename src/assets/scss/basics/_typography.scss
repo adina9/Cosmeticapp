@@ -1,0 +1,46 @@
+@font-face {
+  font-family: cereal;
+  src: url("../../fonts/cereal/cereal-bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: cereal;
+  src: url("../../fonts/cereal/cereal-medium.ttf");
+  font-weight: bolder;
+}
+// @font-face {
+//   font-family: cereal;
+//   src: url("../../fonts/cereal/cereal-regular.ttf");
+//   font-weight: normal;
+// }
+.material-icons {
+  user-select: none;
+  &.md-28 {
+    font-size: 28px;
+  }
+  &.md-22 {
+    font-size: 22px;
+  }
+  &.md-18 {
+    font-size: 18px;
+  }
+  &.md-dark {
+    color: black;
+    opacity: 0.54;
+  }
+  &.md-blue {
+    color: #2196f3;
+  }
+  &.md-light {
+    color: rgba(255, 255, 255, 1);
+  }
+  &.md-inactive {
+    &.md-light {
+      color: rgba(255, 255, 255, 0.3);
+    }
+    &.md-dark {
+      color: rgba(0, 0, 0, 0.26);
+    }
+  }
+}

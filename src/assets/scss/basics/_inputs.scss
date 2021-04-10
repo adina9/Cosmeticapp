@@ -1,0 +1,42 @@
+.btn-disable {
+  pointer-events: none;
+  cursor: no-drop;
+}
+
+.cta-btn {
+  background-image: radial-gradient(
+    circle at center center,
+    rgb(255, 56, 92) 0%,
+    rgb(230, 30, 77) 27.5%,
+    rgb(227, 28, 95) 40%,
+    rgb(215, 4, 102) 57.5%,
+    rgb(189, 30, 89) 75%,
+    rgb(189, 30, 89) 100%
+  );
+  background-size: 200% 200% !important;
+  color: #fff;
+  padding: 12px 32px;
+  min-width: 64px;
+  text-overflow: ellipsis;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  font-family: roboto, "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  font-size: 14px;
+  font-weight: 500;
+  transition: box-shadow 0.2s;
+  &:disabled {
+    color: rgba(0, 0, 0, 0.26);
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.12);
+    background-image: none;
+    cursor: default;
+  }
+}
+.simple-btn {
+  padding: 3px 10px;
+  transition: 0.3s all;
+  background-color: lightcyan;
+  border: 1px solid lightblue;
+  &:hover {
+    background-color: lighten(cyan, 10%);
+  }
+}

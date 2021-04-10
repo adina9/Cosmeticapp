@@ -1,0 +1,59 @@
+<div class="item-details" [ngClass]="{'is-bought':item.isBought}">
+  
+  <div class="grid-part">
+
+    <div class="first-part">
+      <button class="back-btn" (click)="onBack()">Back</button>
+      <img [src]="item.img" alt="">
+      <!-- <button class="buy-btn"  (click)="onBuyItem()" *ngIf= "loggedInUser$ | async &&!item.isBought&&item.inStock">Buy</button> -->
+      <button class="buy-btn"  (click)="onBuyItem()" *ngIf= "!item.isBought&&item.inStock">Buy</button>
+     
+    </div>
+
+    <div class="second-part">
+      
+      <div class="info">
+        <h2>{{item.name}} - {{item.price|currency}}</h2>
+        <p class="desc-item">{{item.description}}</p>
+        <!-- <p>In stock: {{item.inStock? 'Yes':'No'}}</p> -->
+      </div>
+
+      <p *ngIf="item.isBought" class="not-stock">Not In Stock...</p>
+      
+      <div class="flex editing">
+        <button class="remove-btn" (click)="isRemoveClicked=true">
+          <img src="./assets/imgs/trash.png" alt="">
+        </button>
+
+        <a class="edit-btn" [routerLink]="['/item/edit',item.id]">
+        <img src="./assets/imgs/edit.jpg" alt="">
+        </a>
+
+      </div>
+    </div>
+
+    <div class="confirm" *ngIf="isRemoveClicked">
+      <p>Are You Sure You Want To Delete This Item?</p>
+      <div class="confirm-btns">
+        <button class="cancel-btn" (click)="cancel()">Cancel</button>
+        <button class="remove-btn" (click)="onRemoveItem()">Delete</button>
+      </div>
+    </div>
+    <div class="wait-remove" *ngIf="isModalShown">
+      <p>Deleting...</p>
+    </div>
+
+  </div>
+
+  <div class="reviews-btn" *ngIf=!isReviewsClicked>
+      <button (click)="isReviewsClicked=true">Reviews</button>
+  </div>
+
+  <div class="reviews-area" *ngIf=isReviewsClicked>
+    <div class="back-btn" *ngIf=isReviewsClicked>
+      <button (click)="isReviewsClicked=false">X</button>
+    </div>
+    <reviews [item]="item" [isReviewsClicked]="isReviewsClicked"></reviews>
+  </div>  
+
+</div>

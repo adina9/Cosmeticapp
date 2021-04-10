@@ -1,0 +1,12 @@
+<form #form="ngForm" (ngSubmit)="onSaveItem(form.value)" class="item-edit simple-form">
+    <input #nameInput="ngModel" required type="text" placeholder="Name" [ngModel]="item.name" name="name">
+    <textarea class="text-area" type="text" placeholder="Description" [ngModel]="item.description" name="description"></textarea>
+    <input required type="number" placeholder="price" [ngModel]="item.price" name="price">
+    <label for="inStock">
+      In Stock
+      <input type="checkbox" id="inStock" [ngModel]="item.inStock" name="inStock">
+    </label>
+    <p class="form-errors">{{(form.touched && form.invalid)? 'Must fill name and price!':''}}</p>
+    <button class="save-btn">Save</button>
+    <!-- {{nameInput.value}} -->
+  </form>
